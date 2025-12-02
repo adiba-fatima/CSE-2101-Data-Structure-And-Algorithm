@@ -1,4 +1,4 @@
-#include <iostream>//insert after given data
+#include <iostream>//insert before given data
 using namespace std;
 int main()
 {
@@ -23,4 +23,5 @@ int main()
     {
         cout<<LA[i]<<" ";
     }
+
 }
