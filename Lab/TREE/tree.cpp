@@ -1,3 +1,4 @@
+//create tree, inorder, postorder, preorder
 #include <iostream>
 using namespace std;
 struct node
@@ -80,4 +81,5 @@ int main()
     cout<<"\nPostorder Traversal: ";
     postorder(root);
     return 0;
+
 }
