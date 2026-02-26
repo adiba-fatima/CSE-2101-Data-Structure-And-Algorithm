@@ -4,7 +4,8 @@ void bubblesort(int LA[],int n)
 {
     for(int i=0; i<n-1;i++)
     {
-        bool isswapped=false; //(optimising)deciding if the array is already sorted. if not then the loop will be skipped and already sorted arrays will not run the loops
+        bool isswapped=false; //(optimising)deciding if the array is already sorted. 
+        //if not then the loop will be skipped and already sorted arrays will not run the loops
         for(int j=0; j<n-i-1;j++)
         {
             if(LA[j]>LA[j+1])
@@ -34,3 +35,4 @@ int main()
     return 0;
 
 }
+
