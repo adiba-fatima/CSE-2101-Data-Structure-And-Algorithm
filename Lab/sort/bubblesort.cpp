@@ -1,20 +1,36 @@
-#include <iostream>
+#include <iostream>//complexity o(n^2)
 using namespace std;
+void bubblesort(int LA[],int n)
+{
+    for(int i=0; i<n-1;i++)
+    {
+        bool isswapped=false; //(optimising)deciding if the array is already sorted. if not then the loop will be skipped and already sorted arrays will not run the loops
+        for(int j=0; j<n-i-1;j++)
+        {
+            if(LA[j]>LA[j+1])
+            {
+                swap(LA[j],LA[j+1]);
+                isswapped=true;
+            }
+        }
+        if(!isswapped)
+            break;
+    }
+}
+void printarray(int LA[],int n)
+{
+    for(int i=0; i<n;i++)
+    {
+        cout<<LA[i]<<" ";
+    }
+}
 int main()
 {
-    int arr[]={12,43,23,45,10,3};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i<n-1;i++)
-    {
-        for(int j=0;j<n-i-1;j++)
-        {
-            if(arr[j]>arr[j+1])
-            swap(arr[j],arr[j+1]);
-        }
-    }
-    cout<<"sorted array:";
-    for(int i=0;i<n;i++)
-    {
-        cout<<arr[i]<<" ";
-    }
+    int LA[]={64,34,25,12,22,11,90};
+    int n=sizeof(LA)/sizeof(LA[0]);
+    bubblesort(LA,n);
+    cout<<"Sorted array: \n";
+    printarray(LA,n);
+    return 0;
+
 }
